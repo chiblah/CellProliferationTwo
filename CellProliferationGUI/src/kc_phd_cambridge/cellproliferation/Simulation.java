@@ -265,9 +265,10 @@ public class Simulation implements Runnable
         
         // Perform the logic to model stochastic distribution of each double
         // stranded DNA complex into daughter cells
-        if(homologous_pair_count==1)
+        if(chromosome_count==1)
         {// Is this the second homologous chromosome, perform stochastic segregation of chromosomes into daughter cells
           double new_zero_to_one = randomDouble();
+          //double new_zero_to_one = 0.4;
           
           if(new_zero_to_one >= 0.5)
           {// swap the chromosome between genomes
@@ -277,17 +278,18 @@ public class Simulation implements Runnable
             // being evaluated from each chromosome
             temp_chromosome_one = temp_genome_one[homologous_pair_count][chromosome_count];
             temp_chromosome_two = temp_genome_two[homologous_pair_count][chromosome_count];
-
+     
             // Swap the chromosomes
             temp_genome_one[homologous_pair_count][chromosome_count] = temp_chromosome_two;
             temp_genome_two[homologous_pair_count][chromosome_count] = temp_chromosome_one;
+            
           }else
           {//Don't swap chromosomes
           }
         }// If second homologous chromosome
       }// for each chromosome in each homologous pair
     }// foreach homologous pair of the genome
-    
+
     // Write the new genomes back into the corresponding daughter cells
     daughter_cell_one.setGenome(temp_genome_one);
     daughter_cell_two.setGenome(temp_genome_two);
