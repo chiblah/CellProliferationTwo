@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="CellProliferationGUI.jar" size="23748" download="eager" />
+    <jar href="CellProliferationGUI.jar" size="23752" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="CellProliferationGUI" >
     <param name="requiredFXVersion" value="8.0+"/>
