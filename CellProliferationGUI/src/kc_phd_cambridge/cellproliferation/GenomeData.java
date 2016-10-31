@@ -88,7 +88,7 @@ public class GenomeData
           {
             // Store the header line
             header_lines.add(line);
-            no_glitches = true;// Dirty trick, accepts the provided file because a header line has been found. Will cause problems if user selects an invalid file that contins any line beginning with a '>' character
+            no_glitches = true;// Dirty work around, accepts the provided file because a header line has been found. Will cause problems if user selects an invalid file that contins any line beginning with a '>' character
           }
           all_genome_data_contents.add(line); 
         }  

@@ -137,8 +137,8 @@ public class Simulation implements Runnable
             {// current cell can divide
               
               //Produce a random number, R, between 0 and 1. Divide if division threshold attained
-              double number_between_zero_and_one = randomDouble();
-              //double number_between_zero_and_one = 0.1;
+              //double number_between_zero_and_one = randomDouble();
+              double number_between_zero_and_one = 0.1;
 
               if(number_between_zero_and_one < 0.2) //The cell can divide
               {// If division threshold attained
